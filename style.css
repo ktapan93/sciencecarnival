@@ -1,0 +1,225 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto-Regular";
+  color: #555555;
+  font-size: 13px;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  max-width: 100px;
+  margin-right: 20px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+:focus {
+  outline: none;
+}
+
+.wrapper {
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  background: linear-gradient(to bottom, #8b3992, #813588); /* Gradient for mobile */
+}
+
+.inner {
+  min-width: 850px;
+  margin: auto;
+  padding-top: 68px;
+  padding-bottom: 48px;
+  background: url("Jane_Jax-LOGO.jpg");
+  border-radius: 18px;
+}
+
+.inner h3 {
+  text-transform: uppercase;
+  font-size: 22px;
+  font-family: "Roboto";
+  text-align: center;
+  margin-bottom: 32px;
+  color: #ffffff;
+  letter-spacing: 2px;
+}
+
+form {
+  width: 50%;
+  padding-left: 45px;
+}
+
+.form-group {
+  display: flex;
+}
+
+.form-group .form-wrapper {
+  width: 50%;
+}
+
+.form-group .form-wrapper:first-child {
+  margin-right: 20px;
+}
+
+.form-wrapper {
+  margin-bottom: 17px;
+}
+
+.form-wrapper label {
+  margin-bottom: 9px;
+  display: block;
+  font-family: "Roboto";
+
+}
+
+.form-control {
+  border: 1px solid #ccc;
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 0 20px;
+  border-radius: 20px;
+  font-family: "roboto";
+  background: #fff;
+}
+
+.form-control:focus {
+  border: 1px solid #ae3c33;
+}
+
+select {
+  appearance: none;
+  cursor: pointer;
+  padding-left: 20px;
+  color: #333;
+  background-color: #fff;
+  background-image: url('arrow-down.png');
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+select option[value=""][disabled] {
+  display: none;
+}
+
+button {
+  border: none;
+  width: 152px;
+  height: 40px;
+  margin: auto;
+  margin-top: 29px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: #ff02d5;
+  font-size: 13px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Muli-SemiBold";
+  border-radius: 20px;
+  overflow: hidden;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  transition-property: color;
+  transition-duration: 0.5s;
+}
+
+button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #3a0030;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition-property: transform;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+
+button:hover:before {
+  transform: scaleX(1);
+  background: #751363;
+}
+
+
+@media (max-width: 991px) {
+  .inner {
+      min-width: 768px;
+  }
+}
+
+@media (max-width: 767px) {
+  .inner {
+      min-width: auto;
+      background: none;
+      padding-top: 0;
+      padding-bottom: 0;
+  }
+
+  form {
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Desktop styles */
+  .wrapper {
+      background: #ffffff; /* White background for desktop */
+  }
+}
+
+@media (min-width: 768px) {
+  /* Desktop styles */
+
+  .logo-container {
+    display: none;
+  }
+}
