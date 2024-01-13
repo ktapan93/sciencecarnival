@@ -15,11 +15,11 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom:px;
 }
 
 .logo {
-  max-width: 10%;
+  max-width: 140px;
   height: auto;
   margin-right: 10px;
 }
@@ -31,12 +31,12 @@ h1 {
 }
 
 form {
-  max-width: 400px;
+  max-width: 600px;
   margin: 0 auto;
-  background: linear-gradient(to bottom, #af3fb9, #823589);
   padding: 45px;
-  border-radius: 12px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 18px;
+  background: linear-gradient(to bottom, #af3fb9, #823589);
+ 
 }
 
 label {
@@ -82,5 +82,100 @@ button:hover {
   .logo {
     max-width: 120px; /* Adjust the size for smaller screens */
     margin-bottom: 10px;
+  }
+}
+/* Your existing CSS remains unchanged */
+
+/* Additional styling for responsive layouts */
+
+.desktop-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.avatar {
+  max-width: 350px;
+  height: auto;
+
+}
+
+.mobile-layout {
+  display: none; /* Hide on desktop */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+  .desktop-layout {
+    display: none; /* Hide on mobile */
+  }
+
+  .mobile-layout {
+    display: block; /* Show on mobile */
+  }
+}
+
+
+/* Your existing CSS remains unchanged */
+
+.main-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  
+}
+
+.desktop-layout,
+.mobile-layout {
+  flex: 1;
+  max-width: px; /* Adjust the maximum width as needed */
+  margin: 0; /* Add margin for spacing */
+}
+
+/* Add this style for the desktop layout */
+.desktop-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2%;
+  
+  
+}
+
+.form-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(to bottom, #af3fb9, #823589);
+  max-width: 1280px;
+  border-radius: 18px;
+}
+
+/* Style for the image container */
+.image-container {
+  max-width: 450px; /* Adjust the max-width as needed */
+  margin-right: 20px; /* Add margin for spacing */
+}
+
+/* Style for the form container */
+.form-container {
+  max-width: 1000px; /* Adjust the max-width as needed */
+  max-height: auto;
+  color: #fff; /* Text color for better visibility */
+  
+}
+
+/* Style for the mobile form */
+.mobile-form {
+  max-width: 80%; /* Adjust the max-width as needed */
+  margin: 5%; /* Add margin for spacing */
+}
+
+/* Hide desktop content on mobile */
+@media screen and (max-width: 600px) {
+  .desktop-layout {
+    display: none; /* Hide on mobile */
   }
 }

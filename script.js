@@ -1,32 +1,147 @@
 const citiesByState = {
-  "Karnataka": ["Bengaluru", "Mysuru"],
-  "Maharashtra": ["Mumbai", "Pune"],
-  "Tamil Nadu": ["Chennai", "Coimbatore"],
+  "Select your state": [""],
+  "Andhra Pradesh": ["Anantapur", "Nellore", "Kadapa", "Vijayawada", "Visakhapatnam", "Kurnool", "Tirupati", "Guntur", "GVMC", "Rajahmundry"],
+  "Assam": ["Dibrugarh"],
+  "Bihar": ["Patna", "Muzaffarpur", "Purnia", "Bhagalpur", "Gaya", "Darbhanga"],
+  "Chhattisgarh": ["Raipur", "Durg", "Bilaspur"],
   "Delhi": ["New Delhi"],
-  "Uttar Pradesh": ["Lucknow", "Kanpur"],
-  "Rajasthan": ["Jaipur", "Jodhpur"],
-  "Telangana": ["Hyderabad"],
-  "Gujarat": ["Ahmedabad", "Surat"],
-  "Kerala": ["Thiruvananthapuram"],
-};
+  "Gujarat": ["Ahmedabad", "Surat", "Rajkot", "Vapi", "Bhavnagar", "Vadodara", "Anand"],
+  "Haryana": ["Karnal", "Ambala", "Gurgaon", "Faridabad", "Sonipat", "Hisar", "Jagadhiri", "Sirsa", "Chandigarh", "Panchkula"],
+  "Himachal Pradesh": ["Shimla"],
+  "Jharkhand": ["Jamshedpur", "Dhanbad", "Bokaro Steel City", "Ranchi"],
+  "Karnataka": ["Bengaluru", "Gulbarga", "Hassan", "Belagavi", "Hubli-Dharwad", "Davanagere", "Bijapur", "Mysore", "Shivamogga", "Mangalore"],
+  "Kerala": ["Kochi", "Kozhikode", "Palakkad", "Kollam", "Kottayam", "Thrissur", "Thiruvananthapuram", "Kannur", "Malappuram"],
+  "Madhya Pradesh": ["Jabalpur", "Indore", "Bhopal", "Ujjain", "Gwalior", "Rewa", "Sagar"],
+  "Maharashtra": ["Mumbai", "Solapur", "Nanded", "Pune", "Thane", "Nashik", "Dhule", "Amravati", "Aurangabad", "Latur", "Akola", "Ahmednagar", "Navi Mumbai", "Nagpur"],
+  "Odisha": ["Bhubaneswar", "Cuttack"],
+  "Punjab": ["Ludhiana", "Kharar", "Jalandhar", "Bathinda", "Sahibzada Ajit Singh Nagar, Mohali", "Sahibzada Ajit Singh Nagar", "Amritsar"],
+  "Rajasthan": ["Jodhpur", "Bikaner", "Jaipur", "Bhilwara", "Ganganagar", "Udaipur", "Ajmer", "Bharatpur", "Sikar", "Alwar"],
+  "Tamil Nadu": ["Chennai", "Coimbatore", "Puducherry", "Tiruchirappalli", "Salem", "Krishnagiri", "Vellore", "Erode"],
+  "Telangana": ["Karimnagar", "Hyderabad", "Khammam"],
+  "Uttar Pradesh": ["Ghaziabad", "Lucknow", "Faizabad", "Kanpur", "Jhansi", "Saharanpur", "Gautam Buddha Nagar", "Noida", "Meerut", "Bareilly", "Agra", "Mathura", "Allahabad", "Aligarh"],
+  "Uttarakhand": ["Dehradun", "Haridwar", "Roorkee", "Udham Singh Nagar"],
+  "West Bengal": ["Siliguri", "Asansol", "Barddhaman", "Kolkata", "Kharagpur"]
+}
+;
 
 const centresByCity = {
-  "Bengaluru": ["Indiranagar", "Koramangala", "Whitefield"],
+  "Anantapur": ["Anantapur-Sangameswara Circle"],
+  "Nellore": ["Nellore-Annamayya"],
+  "Kadapa": ["Kadapa-Maruti Nagar"],
+  "Vijayawada": ["Vijayawada-Eluru Road", "Vijayawada-Benz Circle"],
+  "Visakhapatnam": ["Visakhapatnam-Chinamushidiwada", "Visakhapatnam-Madhurawada"],
+  "Kurnool": ["Kurnool-Seshadri Nagar", "Kurnool-Gandhi Nagar"],
+  "Tirupati": ["Tirupati-Annarao Circle"],
+  "Guntur": ["Guntur-Arundelpet"],
+  "GVMC": ["Visakhapatnam-Dwaraka Nagar"],
+  "Rajahmundry": ["Rajahmundry-Kotagummam"],
+  "Dibrugarh": ["Dibrugarh-Khalihamari"],
+  "Patna": ["Patna-Anishabad", "Patna-Sampatchak", "Patna-RPS More", "Patna-Phulwari Sharif", "Patna-Saristabad", "Patna-Boaring Road"],
+  "Muzaffarpur": ["Muzaffarpur-Saraiya Ganj"],
+  "Purnia": ["Purnia-Navratan Hatta"],
+  "Bhagalpur": ["Bhagalpur-Bhikhanpur"],
+  "Gaya": ["Gaya-AP Colony"],
+  "Darbhanga": ["Darbhanga-Mirzapur Chowk"],
+  "Raipur": ["Raipur-Dangania", "Raipur-Shankar Nagar"],
+  "Durg": ["Durg-Indira market", "Bhilai-Risali"],
+  "Bilaspur": ["Bilaspur-Link Road"],
+  "New Delhi": ["Delhi-Palam-Dabri Road", "Delhi-Dilshad Garden", "Delhi-Mayur Vihar", "Delhi-Rohini Sector 11", "Delhi-Defence Colony", "Delhi-Najafgarh", "Delhi-Janakpuri", "Delhi- Vasant Kunj", "Delhi-Dwarka", "Delhi-Karol Bagh", "Delhi-Mundka", "Delhi-Preet vihar", "Delhi-Rajouri Garden", "Delhi-Pitampura"],
+  "Ahmedabad": ["Ahmedabad-Maninagar", "Ahmedabad-New CG Road", "Ahmedabad-SG Highway", "Ahmedabad-Bopal", "Ahmedabad-Bapu Nagar", "Ahmedabad-Memnagar", "Ahmedabad-Nikol Centre", "Ahmedabad-Paldi"],
+  "Surat": ["Surat-Pal", "Surat-Katargam", "Surat-Varachha"],
+  "Rajkot": ["Jamnagar-Aerodrome road"],
+  "Vapi": ["Vapi-Chala"],
+  "Bhavnagar": ["Bhavnagar-Kaliyabid"],
+  "Vadodara": ["Vadodara-Fatehganj", "Vadodara-Ajwa Road"],
+  "Anand": ["Anand-Vidyanagar"],
+  "Karnal": ["Karnal-Mall Road"],
+  "Ambala": ["Ambala-Sadar Bazaar"],
+  "Gurgaon": ["Gurgaon-Sushant Lok", "Gurgaon-South City 2", "Gurgaon-Old DLF"],
+  "Faridabad": ["Faridabad-Sector 16", "Faridabad-Railway Road NIT"],
+  "Sonipat": ["Sonipat-Model Town"],
+  "Hisar": ["Hisar-Camp Chowk"],
+  "Jagadhiri": ["Yamuna Nagar-Model Town"],
+  "Sirsa": ["Sirsa-Ambedkar Chowk"],
+  "Chandigarh": ["Chandigarh-Sector 34A"],
+  "Panchkula": ["Panchkula-Sector 11"],
+  "Shimla": ["Shimla-Knollswood"],
+  "Jamshedpur": ["Jamshedpur-Mango", "Jamshedpur-Bistupur"],
+  "Dhanbad": ["Dhanbad - Steel Gate", "Dhanbad-Bank More"],
+  "Bokaro Steel City": ["Bokaro-Sector 4"],
+  "Ranchi": ["Ranchi-Harmu Road"],
+  "Bengaluru": ["Yelahanka", "Mission Road", "JP Nagar", "Nagasandra", "Kalyan Nagar", "Sadashiva Nagar", "KR Puram", "Electronic City", "Nagavara", "Vijaya Nagar", "HSR", "White Field", "KSIT Junction", "Mahalakshmi Layout", "Rajarajeshwari nagar"],
   "Mysuru": ["Saraswathipuram", "Vijayanagar"],
-  "Mumbai": ["Bandra", "Juhu", "Powai"],
-  "Pune": ["Koregaon Park", "Kothrud", "Viman Nagar"],
-  "Chennai": ["Adyar", "Anna Nagar", "Besant Nagar"],
-  "Coimbatore": ["RS Puram", "Saibaba Colony", "Peelamedu"],
-  "New Delhi": ["Connaught Place", "Defence Colony", "GK"],
-  "Lucknow": ["Gomti Nagar", "Hazratganj", "Aliganj"],
-  "Kanpur": ["Civil Lines", "Swaroop Nagar", "Kakadeo"],
-  "Jaipur": ["Malviya Nagar", "C-Scheme", "Vaishali Nagar"],
-  "Jodhpur": ["Ratanada", "Sardarpura", "Shastri Nagar"],
-  "Hyderabad": ["Banjara Hills", "Jubilee Hills", "Gachibowli"],
-  "Ahmedabad": ["Satellite", "Bodakdev", "Thaltej"],
-  "Surat": ["Adajan", "Vesu", "Piplod"],
-  "Thiruvananthapuram": ["Kowdiar", "Sreekariyam", "Vellayambalam"],
-};
+  "Gulbarga": ["Timmapuri Circle"],
+  "Hassan": ["Krishnaraja Pura"],
+  "Belagavi": ["Nehru Nagar"],
+  "Hubli-Dharwad": ["Jayanagar", "Dharwad-Court Circle"],
+  "Mangalore": ["Urwa"],
+  "Kochi": ["Kadavantra", "Pathadipalam"],
+  "Kozhikode": ["Chevayur", "YMCA"],
+  "Palakkad": ["Sultanpet"],
+  "Kollam": ["Kadapakkada"],
+  "Kottayam": ["T B Road"],
+  "Thrissur": ["Aswani Junction"],
+  "Thiruvananthapuram": ["KEK Towers Vazuthacaud"],
+  "Kannur": ["Thavakkara"],
+  "Malappuram": ["Perinthalmanna"],
+  "Jabalpur": ["Gupteshwar", "Garha Road", "Ranjhi"],
+  "Indore": ["Tower Square Centre", "Vijay Nagar", "Bengali Square", "Marimata Square", "Rajendra Nagar", "Sudama Nagar Centre", "Lal Ghati", "Jahangirabad"],
+  "Bhopal": ["Arera Colony", "Lal Ghati"],
+  "Ujjain": ["Tower Square"],
+  "Gwalior": ["City Centre", "Nai Sadak"],
+  "Rewa": ["College Square"],
+  "Sagar": ["Ashok Vihar"],
+  "Mumbai": ["Andheri West", "Goregaon", "Khar", "Kandivali", "Mulund", "Dahisar East", "Virar"],
+  "Solapur": ["Dufferin Chowk"],
+  "Nanded": ["Vazirabad", "Shree Nagar"],
+  "Pune": ["Hadapsar", "Katraj", "Viman Nagar", "Kondhwa", "Koregaon park", "Pimple Saudagar", "Baner"],
+  "Thane": ["Kasarvadavli", "Naupada"],
+  "Dhule": ["Mundada Market"],
+  "Amravati": ["Rukmini Nagar"],
+  "Navi Mumbai": ["Koper Khairane"],
+  "Bhubaneswar": ["Saheed Nagar", "Patrapada", "Chandrashekharpur"],
+  "Ludhiana": ["Ghumar Mandi", "Sector 32-A", "Sunder Nagar", "Dugri Phase1", "Civil Lines"],
+  "Kharar": ["Sector 125"],
+  "Jalandhar": ["Jawahar Nagar"],
+  "Bathinda": ["Civil Lines"],
+  "Sahibzada Ajit Singh Nagar, Mohali": ["Phase IX"],
+  "Sahibzada Ajit Singh Nagar": ["Zirakpur"],
+  "Amritsar": ["Ranjit Avenue"],
+  "Jodhpur": ["Saraswati Nagar", "5th Avenue PWD Colony"],
+  "Bikaner": ["Khaturia Colony"],
+  "Jaipur": ["Raja Park", "C-Scheme", "Vaishali Nagar", "Malviya Nagar", "Pratap Nagar", "Vidhyadhar Nagar", "Gopalpura Bypass"],
+  "Bhilwara": ["Gandhi Nagar"],
+  "Ganganagar": ["Sukhadia Circle"],
+  "Udaipur": ["Hiran Magri", "Bhopalpura"],
+  "Chennai": ["Egmore", "Selaiyur", "Purasawalkam", "Adyar", "Anna Nagar", "Besant Nagar", "Alwarpet", "Porur", "Sholinganallur", "Velachery", "ECR", "Ambattur"],
+  "Coimbatore": ["RS Puram", "Avinashi Road", "Kuniamuthur", "Saibaba Colony", "Peelamedu"],
+  "Puducherry": ["Uzhavarkarai"],
+  "Tiruchirappalli": ["Thillai Nagar", "National College"],
+  "Karimnagar": ["Mukarampura"],
+  "Hyderabad": ["SF Green Park", "Sainikpuri", "Attapur", "Miyapur", "Paradise", "Trimulgherry", "Lanco Hills", "Kukatpally", "Banjara Hills", "Jubilee Hills", "Gachibowli"],
+  "Ghaziabad": ["Raj Nagar Extension", "Kaushambi", "Nehru nagar"],
+  "Lucknow": ["Shushant Golf City", "Aliganj", "Madiyaon", "Hazrat Ganj", "Gomati Nagar", "Ashiyana"],
+  "Faizabad": ["Civil Lines"],
+  "Kanpur": ["Kidwai Nagar", "SwaroopNagar", "Pandu Nagar", "Kakadeo", "Krishna Nagar"],
+  "Jhansi": ["Civil Lines"],
+  "Saharanpur": ["ITI"],
+  "Meerut": ["Jagriti Vihar"],
+  "Noida": ["Sector-136", "Sector 18", "Sector 59"],
+  "Bareilly": ["Prem Nagar"],
+  "Agra": ["Sadar Bazar", "Kargil"],
+  "Mathura": ["Bhuteshwar Road"],
+  "Allahabad": ["Civil Lines"],
+  "Dehradun": ["Clock Tower", "Majra"],
+  "Haridwar": ["Ranipur More Centre"],
+  "Roorkee": ["Civil Lines"],
+  "Siliguri": ["Sevoke Road"],
+  "Asansol": ["Murgasol"],
+  "Barddhaman": ["Birhata"],
+  "Kolkata": ["Salt Lake", "Park Street", "Dalhousie", "Ruby", "Newtown", "Rabindra Sarobar", "Behala"]
+}
+
+
+
 
 // Function to populate cities based on selected state
 function populateCities() {
@@ -90,8 +205,7 @@ function populateStates() {
   // Create a default state option
   const defaultStateOption = document.createElement("option");
   defaultStateOption.value = "";
-  defaultStateOption.text = "Select your state";
-  defaultStateOption.disabled = true;
+    defaultStateOption.disabled = true;
   defaultStateOption.selected = true;
   stateSelect.add(defaultStateOption);
 
@@ -115,6 +229,10 @@ window.onload = function () {
   populateStates();
   document.getElementById("signupForm").reset(); // Reset the form on page load
 };
+
+
+var source = document.getElementById("source").value;
+formData.append("source", source);
 
 
 
@@ -171,6 +289,6 @@ function submitForm() {
       setTimeout(function () {
         document.getElementById("submit").disabled = false;
         document.getElementById("submit").innerText = "Submit";
-      }, 8000);
+      }, 5000);
     });
 }
