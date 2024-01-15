@@ -1,5 +1,5 @@
 const citiesByState = {
-  "Select your state": [""],
+  "Select your state ▼ ": [""],
   "Andhra Pradesh": ["Anantapur", "Nellore", "Kadapa", "Vijayawada", "Visakhapatnam", "Kurnool", "Tirupati", "Guntur", "GVMC", "Rajahmundry"],
   "Assam": ["Dibrugarh"],
   "Bihar": ["Patna", "Muzaffarpur", "Purnia", "Bhagalpur", "Gaya", "Darbhanga"],

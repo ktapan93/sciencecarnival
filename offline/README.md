@@ -1,2 +1,0 @@
-# sciencecarnival
-Science Carnival 
