@@ -137,6 +137,7 @@ const centresByCity = {
   "Siliguri": ["Sevoke Road"],
   "Asansol": ["Murgasol"],
   "Barddhaman": ["Birhata"],
+  "Kharagpur": ["CT Road"],
   "Kolkata": ["Salt Lake", "Park Street", "Dalhousie", "Ruby", "Newtown", "Rabindra Sarobar", "Behala"]
 }
 
