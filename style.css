@@ -55,7 +55,7 @@ a:hover {
 }
 
 .wrapper {
-  min-height: 600px;
+  min-height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -226,8 +226,8 @@ button:hover:before {
 
 
 #date-logo {
-  max-width: 120px; /* Set the maximum width for the specific logo */
-  max-height: 120px; /* Set the maximum height for the specific logo */
+  max-width: 100px; /* Set the maximum width for the specific logo */
+  max-height: 100px; /* Set the maximum height for the specific logo */
   width: auto; /* Maintain aspect ratio */
   height: auto; /* Maintain aspect ratio */
-  margin-right: 10px; /* Adjust the margin to create space between logos */
+  margin-right: 0px; /* Adjust the margin to create space between logos */
