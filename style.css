@@ -226,8 +226,8 @@ button:hover:before {
 
 
 #date-logo {
-  max-width: 150px; /* Set the maximum width for the specific logo */
-  max-height: 150px; /* Set the maximum height for the specific logo */
+  max-width: 120px; /* Set the maximum width for the specific logo */
+  max-height: 120px; /* Set the maximum height for the specific logo */
   width: auto; /* Maintain aspect ratio */
   height: auto; /* Maintain aspect ratio */
   margin-right: 10px; /* Adjust the margin to create space between logos */
